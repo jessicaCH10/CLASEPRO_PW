@@ -108,7 +108,9 @@ centenas, decenas y unidades), y se obtiene el número correspondiente.
     //4.salida datos
         System.out.println("el numero completo es: "+numeroCompleto);
 
-
+        //5.cerrramos como buena practica
+        lecturaTeclado.close();
+        lecturaTeclado = null;//para eliminarlo de memoria
 
 
 
