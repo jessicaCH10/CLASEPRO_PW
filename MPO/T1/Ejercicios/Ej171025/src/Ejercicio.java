@@ -46,6 +46,83 @@ public class Ejercicio {
     }
 
 
+    public void ejercicio2(){
+
+/*Permítase introducir el valor con IVA de una compra con dos decimales (la
+compra no puede ser superior a 500€ ni inferior a 0€) y el valor del IVA de dicha
+compra (valor entero entre 0 y 25%).¿Cuánto costó la compra sin IVA?¿Cuánto fue
+el IVA? Muéstrese los resultados redondeados a dos decimales. (Compra)
+*/
+
+//1. introducir valor compra con dos decimales Y IVA tipo entero
+
+       //decimal 0≥compra<=500
+        lecturaTeclado= new Scanner(System.in);//para pedir datos siempre
+        System.out.println("¿cuanto es el valor de la compra  (entre 0.00 y 500.00): ?");
+        double valorCompra = lecturaTeclado.nextDouble();
+
+        //entero 0≥iva<=25
+        System.out.println("¿Cuanto es el valor del iva  (entre 0 y 25%)?");
+        int valorIVA =lecturaTeclado.nextInt();
+//2.operaciones
+        //precio sin iva
+
+        double precioSiniva= valorCompra / (1 + valorIVA / 100.0);
+
+        //precio iva
+        double IVAcompra= valorCompra -precioSiniva;
+
+//3.salida de datos
+
+        System.out.printf("El precio sin IVA es %.2f%n",precioSiniva);
+        System.out.printf("El precio del IVA es %.2f%n",IVAcompra);
+
+
+//4.cerrramos como buena practica
+        lecturaTeclado.close();
+        lecturaTeclado = null;//para eliminarlo de memoria
+
+
+    }
+
+    public void ejercicio3(){
+        /*Se introducen los 5 dígitos de un número (decenas de mil, unidades de mil,
+centenas, decenas y unidades), y se obtiene el número correspondiente.
+(Numero)*/
+
+//1.introducir datos 2.guardar variables
+        lecturaTeclado= new Scanner(System.in);//para pedir datos siempre
+        System.out.println("¿Cuanto es las decenas de mil?");
+        int decenasMil = lecturaTeclado.nextInt();
+        System.out.println("¿Cuanto es unidades de mil?");
+        int unidadesMil = lecturaTeclado.nextInt();
+        System.out.println("¿Cuanto es las centenas");
+        int centenas = lecturaTeclado.nextInt();
+        System.out.println("¿Cuanto es las decenas");
+        int decenas = lecturaTeclado.nextInt();
+        System.out.println("¿Cuanto es las unidades");
+        int unidades = lecturaTeclado.nextInt();
+    //3.operaciones construit numero completo
+
+        int numeroCompleto = decenasMil * 10000 + unidadesMil * 1000 + centenas * 100 + decenas * 10 + unidades;
+    //4.salida datos
+        System.out.println("el numero completo es: "+numeroCompleto);
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
     public void ejercicio4(){
          /*
     Hágase un programa que convierta segundos en horas, minutos y segundos.
