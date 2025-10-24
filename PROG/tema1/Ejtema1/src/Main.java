@@ -108,7 +108,7 @@ public class Main {
       System.out.println("Puntuación actualizada: " + puntuacion);*/
 
 
-//Ejercicio 6
+/*Ejercicio 6
 
             int numero1 = 10;
             int numero2 = 5;
@@ -122,7 +122,68 @@ public class Main {
             System.out.println("Suma =" + suma);
             System.out.println("Resta =" + resta);
             System.out.println("Multiplicación =" + multiplicacion);
-            System.out.println("División =" + division);
+            System.out.println("División =" + division);*/
+
+
+   /*Ejercicio 7
+
+
+     //1. crear variables y dejarlas guardadas
+
+            String nombre = "Jessica";
+            String apellido ="Carnerero";
+            int edad =30;
+            String ciudad ="Madrid";
+     //2.salida de datos
+            System.out.println("Hola, mi nombre es " + nombre + " " + apellido +
+                    ", tengo " + edad + " años y vivo en " + ciudad + ".");*/
+
+
+    /*Ejercicio 8 Desarrolla un programa que calcule el área de un rectángulo. Declara variables para la base y la altura,
+     y muestra el resultado del cálculo.
+
+    //1. declarar variables
+            int base =2;
+            int altura =5;
+    //2.calculo por formula
+        int area =base*altura;
+     //3.salidad datos
+
+      System.out.println("la base es "+base);
+      System.out.println("la altura es "+altura);
+      System.out.println("El área del rectágulo es "+area);*/
+
+/*Ejercicio 9 Escribe un programa que almacene la información de un producto (nombre, precio, código y disponibilidad)
+ y muestre estos datos formateados por consola.
+
+    //1.declarar variables con los datos
+            String nombre ="auriculares";
+            int precio = 5;
+            String codigo="AUR 1549";
+            boolean disponibilidad = true;
+    //2 mostrar datos
+            System.out.println("INFORMACIÓN DEL PRODUCTO");
+            System.out.println("Nombre: "+nombre);
+            System.out.println("precio: "+precio);
+            System.out.println("codigo: "+codigo);
+            System.out.println("disponibilidad: "+disponibilidad);*/
+
+/*ejercicio 10 Crea un programa que convierta una temperatura de grados Celsius a Fahrenheit.
+Usa una variable para la temperatura en Celsius y muestra el resultado de la conversión.
+
+
+La fórmula para convertir de Celsius a Fahrenheit es:
+
+F = C × 9/5 + 32 */
+
+            //1.crear variables
+            int gradosC =25;
+            //2. calculo formula
+            int gradosF = gradosC * (9/5 +32);
+            //3.salida datos
+            System.out.println ("Temperatura grados celsius:" +gradosC);
+            System.out.println ("Temperatura grados farenheit:" +gradosF);
+
         }
 
 
