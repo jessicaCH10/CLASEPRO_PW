@@ -6,7 +6,11 @@ public class Main {
 
 
 
-  public static void  main (String[] args) {
+
+
+
+
+        public static void  main (String[] args) {
 
 /*ejercicio 1
 
@@ -57,7 +61,7 @@ public class Main {
       System.out.println("Año"+año);*/
 
 
-      //ejercicio5//
+            //ejercicio5//
       /*final String NUMERO_PI = "3.141509";
       final String NOMBRE_APP = "MIAPP";
       final String VERSION = "1.0.0";
@@ -76,7 +80,7 @@ public class Main {
       System.out.println("Usuario actualizado "+usuario);
       System.out.println("Nivel actualizado " +nivel);
       System.out.println("Puntuación actualizada "+puntuacion);*/
-      //otra opcion
+            //otra opcion
    /*   final String NUMERO_PI = "3.141509";
       final String NOMBRE_APP = "MIAPP";
       final String VERSION = "1.0.0";
@@ -106,25 +110,20 @@ public class Main {
 
 //Ejercicio 6
 
-      int numero1 = 10;
-      int numero2 = 5;
-      int suma = numero1 +numero2;
-      int resta = numero1 -numero2;
-      int multiplicacion = numero1 *numero2;
-      int division = (numero1/numero2);
+            int numero1 = 10;
+            int numero2 = 5;
+            int suma = numero1 +numero2;
+            int resta = numero1 -numero2;
+            int multiplicacion = numero1 *numero2;
+            int division = (numero1/numero2);
 
-      System.out.println("Número 1 = " + numero1);
-      System.out.println("Número 2 =" + numero2);
-      System.out.println("Suma =" + suma);
-      System.out.println("Resta =" + resta);
-      System.out.println("Multiplicación =" + multiplicacion);
-      System.out.println("División =" + division);
-  }
-
-
-
-
-
+            System.out.println("Número 1 = " + numero1);
+            System.out.println("Número 2 =" + numero2);
+            System.out.println("Suma =" + suma);
+            System.out.println("Resta =" + resta);
+            System.out.println("Multiplicación =" + multiplicacion);
+            System.out.println("División =" + division);
+        }
 
 
 
