@@ -8,7 +8,7 @@ public class Main {
         //operacionesVariable.operadoresAritmeticos();
         System.out.println("Iniciando ejercicios");
         Ejercicio Ejercicios = new Ejercicio();
-        Ejercicios.ejercicio1Notion4Tema2();
+        Ejercicios.ejercicio4NotionTema2();
     }
 
 
