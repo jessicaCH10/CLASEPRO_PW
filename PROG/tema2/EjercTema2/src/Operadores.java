@@ -72,25 +72,25 @@ public class Operadores {
     }
 
     public void cambioTipos(){
-        double numeroDecimal = 5.98;
+        double numeroDecimal = 5.98;// con todos estos no hay problema porq entran dentro de otros de forma natural
         int numeroEntero = 6;
         double numero = numeroEntero;
         // System.out.println((int)numeroDecimal);
         // System.out.println((double) numeroEntero);
         // System.out.println(numeroEntero);
-        String palabra = "12";
+        String palabra = "12";//pasar string a numero int si es una string escrita el nº si si es por ej hola da error
         int numeroPalabra = Integer.parseInt(palabra);
 
-        String palabraBool = "true";
+        String palabraBool = "true";//pasar palabra a boolean solo vale si es true o false si no da false siempre
         boolean palabraBoolean = Boolean.parseBoolean(palabraBool);
         // System.out.println(palabraBoolean);
         // System.out.println(numeroPalabra+10);
 
-        int numeroEvaluar = 12345;
+        int numeroEvaluar = 12345;//pasar numero a formato string
         String numeroEvaluarStr = String.valueOf(numeroEvaluar);
 
         boolean acierto = true;
-        String aciertoStr = String.valueOf(acierto); // "true"
+        String aciertoStr = String.valueOf(acierto); // boolean a string palabra "true"
 
     }
     //EXPLICACION SCANNER es como un string, es una clase tipo scanner

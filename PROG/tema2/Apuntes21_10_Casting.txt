@@ -1,0 +1,34 @@
+Operadores
+Cambios de tipos
+
+int -> double
+double -> int
+boolean -> string
+string -> int
+char -> string
+float -> int
+
+CASTING
+cambios que entran de forma "natural" dentro del tipo destino. 
+double -> int 7
+int -> double 7.0
+float -> int
+int -> float
+(tipo_destino)nombreVariable
+
+PARSING
+cambios que no entran de forma "natural" dentro del tipo destino. Puede o no fallar
+string -> int. "hola" 
+string -> boolean (SOLO CUANDO EL STRING SEA TRUE O FALSE) si pones cualquier palabra va a dar siempre false
+Wraper (ejemplo Integer).parseInt(str) Integer.parseInt(str)//formula para pasar a boolean
+clase Wraper es la clase envolvente el mismo nombre pero en mayuscula tiene mas funciones
+
+
+int->string
+double->string
+boolean->string
+char->string
+
+String.valueOf() //esta formula para pasar de los tipos anteriores a string
+
+

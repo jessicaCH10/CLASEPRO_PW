@@ -96,7 +96,7 @@ public class Ejercicio {
         //2.operaciones y 3.salida datos
 
         boolean numeroPar = numero%2==0;
-        System.out.printf("El numero %d es par: %b",numero,numeroPar);
+        System.out.printf("El numero %d es par: %b",numero,numeroPar);//formateo(se pone comas para introducir los 2 valores): %d (para sustituir por numero) y %b sustituir x numero par a la salida d datos
 
 
         scanner.close();
@@ -260,7 +260,7 @@ el primero por el segundo y dividirlo entre el tercero. Usa paréntesis para con
         boolean horasExtras = scanner.nextBoolean();
         // 60
         //2.calculos
-        boolean condicionExtras = horasTrabajadas>40 && horasExtras;
+        boolean condicionExtras = horasTrabajadas>40 && horasExtras;//lo siguiente se guarda en un boolean
         // si condicionExtras es true
         int horasExtrasTotal = horasTrabajadas -40;
         int salarioBase = 40*salarioBaseHora;
