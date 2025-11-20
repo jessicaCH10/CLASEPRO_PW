@@ -325,4 +325,128 @@ Nota: Para este ejercicio, asume que tienes funciones auxiliares como longitudCa
 
 
 
-}
+    public void ejercicio13Tema3() {
+        /*Escribe un programa para calcular el precio de entrada a un museo. Pide la edad del usuario y el día de la
+         semana (1=Lunes, 2=Martes... 7=Domingo). Las reglas son: Menores de 12 años: entrada gratis. Entre 12 y 17
+         años: 5€ (pero gratis los martes). Entre 18 y 64 años: 10€ (pero 7€ los jueves). 65 años o más: 6€.
+         Usa operadores lógicos para determinar el precio correcto y muestra el cálculo.*/
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("ENTRADAS");
+        System.out.println("Introduzca la edad del usuario");
+        int edadUsuario = scanner.nextInt();
+        System.out.println("Introduce el dia de la semana día de la semana (1=Lunes, 2=Martes... 7=Domingo)");
+        int dia = scanner.nextInt();
+
+        //calculos
+
+        double precio=0;// se inicializa para no tener que ponerlo constantemente
+        //PRIMER BLOQUE
+        if (edadUsuario <12) {
+
+            precio=0;
+
+        }
+        //SEGUNDO BLOQUE
+        else if (edadUsuario > 12 && edadUsuario < 17 ) {// 12<edadUsuario<17 no se puede poner asi la comparacion xk no funciona
+
+
+            if (dia == 2) { // Martes un if dentro de un else if
+                precio = 0;
+            } else {
+                precio = 5;
+            }
+        }
+        //TERCER BLOQUE
+        else if (edadUsuario >= 18 && edadUsuario <= 64){
+                if (dia==4) { //jueves otro if dentro del else if
+                    precio = 7;
+                }else{
+                 precio=10;
+                }
+            }
+        //CUARTO BLOQUE
+            else if (edadUsuario>=65){
+                precio=6;
+            }
+
+        System.out.println("El precio de tu entrada es "+ precio +"€");
+        scanner.close();
+
+        }
+
+
+    public void ejercicio14Tema3() {
+        /*Desarrolla un programa que determine si una persona es elegible para un préstamo bancario. Pide: edad,
+         ingresos mensuales (€), y si tiene deudas pendientes (true/false). Los requisitos son: Edad entre 21 y 65 años,
+          ingresos mensuales de al menos 1000€, y NO tener deudas pendientes. El programa debe evaluar cada condición y
+           mostrar si es elegible o no, explicando qué requisitos no cumple.*/
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("PRESTAMO HIPOTECARIO");
+        System.out.println("Introduzca la edad del usuario");
+        int edad = scanner.nextInt();
+        System.out.println("Introduce los ingresos mensuales");
+        float ingresos = scanner.nextFloat();
+        System.out.println("Tiene deudas pendientes (true/false) ");
+        boolean deudas = scanner.nextBoolean();
+
+        //variables booleanas se usan para guardar el resultado de cada condición por separado.
+        boolean cumpleEdad = edad >= 21 && edad <= 65;// será true si la edad está entre 21 y 65.
+        boolean cumpleIngresos = ingresos >= 1000;//será true si los ingresos son al menos 1000€.
+        boolean sinDeudas = !deudas;// será true si NO tiene deudas (!deudas).
+
+        /*¿Por qué se hace esto?
+        - Para organizar el código y que sea más legible.
+        - Para reutilizar esas condiciones en el if principal y también en los mensajes de error.
+        - Para evitar repetir lógica como edad >= 21 && edad <= 65 varias veces.*/
+
+        //decision final
+
+        if (cumpleEdad && cumpleIngresos && sinDeudas) {
+            System.out.println("Eres elegible para el préstamo.");
+        }
+        //explicacion de errores para prestamo
+        else {
+            System.out.println("No eres elegible para el préstamo. Motivos:");
+            if (!cumpleEdad) {
+                System.out.println("- La edad debe estar entre 21 y 65 años.");
+            }
+            if (!cumpleIngresos) {
+                System.out.println("- Los ingresos mensuales deben ser de al menos 1000€.");
+            }
+            if (!sinDeudas) {
+                System.out.println("- No debes tener deudas pendientes.");
+            }
+        }
+
+        scanner.close();
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+

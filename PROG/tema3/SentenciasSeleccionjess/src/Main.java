@@ -5,7 +5,7 @@ public class Main {
         //SentenciaIF sentenciaIF = new SentenciaIF();
         //sentenciaIF.estaAprobado(1);
         EjercicioIf ejercicio =new EjercicioIf();
-        ejercicio.ejercicio10Tema3();
+        ejercicio.ejercicio14Tema3();
 
 
 
