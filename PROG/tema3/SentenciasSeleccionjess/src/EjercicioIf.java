@@ -420,10 +420,69 @@ Nota: Para este ejercicio, asume que tienes funciones auxiliares como longitudCa
 
         scanner.close();
 
+
     }
 
 
+    public void ejercicio15Tema3() {
+        /*Crea un programa que calcule el coste de envío de un paquete. Pide: peso del paquete (kg), distancia de envío
+         (km), y si es envío urgente (true/false). Las reglas son: Precio base: 5€. Si el peso es mayor de 5kg, añadir
+         2€ por cada kg adicional. Si la distancia es mayor de 100km, añadir 10€. Si es envío urgente, multiplicar el
+          precio total por 1.5. Muestra todos los cálculos paso a paso.*/
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("COSTE ENVIO");
+        System.out.println("Introduzca Peso paquete en  kg");
+        double peso = scanner.nextDouble();
+        System.out.println("Intrduce distancia de envio en km");
+        double distancia = scanner.nextDouble();
+        System.out.println("Envio urgente (true/false) ");
+        boolean urgente = scanner.nextBoolean();
 
+
+        //  inicializamos Precio base
+        double precioBase = 5.0;
+        System.out.println("Precio base: " + precioBase + "€");
+
+
+        // bloque 2 Recargo por peso
+        double recargoPeso = 0;
+        if (peso > 5) {
+            recargoPeso = (peso - 5) * 2;
+            System.out.println("Recargo por peso adicional (" + (peso - 5) + " kg): " + recargoPeso + "€");
+        } else {
+            System.out.println("No hay recargo por peso.");
+        }
+       //bloque 3 recargo por distancia
+        double recargoDistancia=0;//se inicializa
+        if (distancia>100){
+            recargoDistancia=precioBase+10;
+            System.out.println("Recargo por distancia (>100 km): " + recargoDistancia + "€");
+
+        }else{
+            System.out.println("No hay recargo por distancia  ");
+        }
+        //calcular precio total
+        double precioTotal= precioBase+ recargoPeso +recargoDistancia;
+        System.out.println("Subtotal antes de urgencia: " + precioTotal + "€");
+
+        //urgencia se iguala al precio total para poder añadir el recargo de la urgencia
+        double precioFinal = precioTotal;
+        if(urgente) {
+            precioFinal = precioTotal * 1.5;
+            System.out.println("El precio final es " + precioFinal + "€");
+        }
+
+            //  Resultado final
+            System.out.println("Precio final del envío: " + precioFinal + "€");
+
+
+
+
+
+            scanner.close();
+
+
+    }
 
 
 
