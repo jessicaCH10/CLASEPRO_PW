@@ -1,0 +1,73 @@
+
+MÉTODOS DE LA CLASE STRING EN JAVA
+1. Introducción
+La clase  en Java es una de las más utilizadas. Permite trabajar con texto y ofrece una gran cantidad de métodos para consultar, comparar, modificar y analizar cadenas de caracteres.
+Este documento recopila los métodos más importantes y usados en programación básica e intermedia.
+
+1. 	Métodos fundamentales
+Información sobre la cadena:
+• 	length() – Devuelve la cantidad de caracteres.
+• 	charAt(int index) – Devuelve el carácter en una posición.
+• 	isEmpty() – Indica si la cadena está vacía.
+• 	isBlank() – Indica si está vacía o solo contiene espacios.
+Comparación:
+• 	equals(String s) – Compara si dos cadenas son iguales.
+• 	equalsIgnoreCase(String s) – Compara ignorando mayúsculas.
+• 	compareTo(String s) – Compara alfabéticamente.
+• 	compareToIgnoreCase(String s) – Igual pero sin distinguir mayúsculas.
+Búsqueda:
+• 	indexOf(String s) – Primera posición donde aparece.
+• 	lastIndexOf(String s) – Última posición donde aparece.
+• 	contains(CharSequence s) – Indica si contiene un texto.
+• 	startsWith(String s) – Indica si empieza por s.
+• 	endsWith(String s) – Indica si termina por s.
+Transformación:
+• 	toUpperCase() – Convierte a mayúsculas.
+• 	toLowerCase() – Convierte a minúsculas.
+• 	trim() – Elimina espacios al inicio y final.
+• 	strip() – Versión moderna de trim.
+• 	replace(char a, char b) – Reemplaza caracteres.
+• 	replace(String a, String b) – Reemplaza cadenas.
+• 	substring(int begin) – Devuelve parte de la cadena.
+• 	substring(int begin, int end) – Devuelve parte entre posiciones.
+División y unión:
+• 	split(String regex) – Divide la cadena en partes.
+• 	join(CharSequence delimiter, ...) – Une cadenas con un separador.
+Conversión:
+• 	toCharArray() – Convierte a array de caracteres.
+• 	valueOf(...) – Convierte números u objetos a String.
+2. 	Métodos intermedios
+• 	repeat(int count) – Repite la cadena varias veces.
+• 	formatted(Object... args) – Formato moderno.
+• 	matches(String regex) – Compara con una expresión regular.
+• 	replaceAll(String regex, String replacement) – Reemplaza usando regex.
+• 	replaceFirst(String regex, String replacement) – Reemplaza la primera coincidencia.
+• 	stripLeading() – Quita espacios al inicio.
+• 	stripTrailing() – Quita espacios al final.
+3. 	Lista extendida de métodos de String
+• 	codePointAt(int index)
+• 	codePointBefore(int index)
+• 	codePointCount(int begin, int end)
+• 	concat(String str)
+• 	contentEquals(CharSequence cs)
+• 	contentEquals(StringBuffer sb)
+• 	endsWith(String suffix)
+• 	getBytes()
+• 	getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)
+• 	hashCode()
+• 	intern()
+• 	lastIndexOf(int ch)
+• 	replaceAll(String regex, String replacement)
+• 	split(String regex)
+• 	strip()
+• 	toLowerCase()
+• 	toUpperCase()
+• 	trim()
+4. 	Ejemplos básicos
+String frase = "Hola Jess"; frase.length();          // Cuenta caracteres frase.charAt(0);
+         // Obtiene un carácter frase.contains("Jess");  // Busca texto frase.toUpperCase();     //
+ Convierte a mayúsculas frase.substring(0, 4);   // Extrae parte de la cadena
+
+
+Conclusión
+La clase  es esencial en Java. Conocer sus métodos permite manipular texto de forma eficiente y resolver problemas comunes en programación.

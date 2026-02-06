@@ -300,26 +300,31 @@ public class EjercicioIf {
 Nota: Para este ejercicio, asume que tienes funciones auxiliares como longitudCadena(texto), contienNumero(texto).*/
         Scanner scanner = new Scanner(System.in);
         System.out.println("CONTRASEÑA");
-        System.out.println("Introduzca el importe de la compra");
-        double compra = scanner.nextDouble();
-        System.out.println("cliente es socio (true/false)");
-        boolean socio = scanner.nextBoolean();
-        //calculos
+        System.out.println("Introduzca la contraseña que desea evaluar");
+        String contrasenia = scanner.next();//esto es un tipo complejo se pone en mayusc String
+        //tiene muchas funcionalidades se pone contrasenia.elnombredelafuncionalidad
+        boolean requisitoLong = longCadena(contrasenia) >= 8; // cuantas letras tiene la palabras
+        boolean contieneNumero = contieneNumero(contrasenia);
+        boolean passInvalida = contrasenia.equals("passwood") || contrasenia.equals("12345678");
+        System.out.println("Requisito long: "+requisitoLong);
+        System.out.println("Requisito numero: "+contieneNumero);
+        System.out.println("Requisito pass invalida: "+passInvalida);
+        boolean passOK = requisitoLong && contieneNumero && !passInvalida;
+        System.out.println("La evaluacion general es "+passOK);
+    }
 
-        if (socio && compra>= 200) {// el boolean se pone directamente para comparar no se iguala a true
-            double compraDescuento20= compra-((compra*20)/100);
-            System.out.println("descuento del 20% "+compraDescuento20+" €");
+    private int longCadena (String cadena){
+        return cadena.length();
+    }//funcion
 
-        } else if (socio && compra< 200) {
-            double compraDescuento10= compra-((compra*10)/100);
-            System.out.println("descuento del 20% "+compraDescuento10+" €");
+    private boolean contieneNumero(String cadena){/* hacemos este metodo aparte por si nos pide cambiar la logica (nueros o cadena) solo se cambia la logica y no lo q hay dentro */
+        return cadena.contains("1") || cadena.contains("2") || cadena.contains("3")
+                || cadena.contains("4") || cadena.contains("5") || cadena.contains("6")
+                || cadena.contains("7") || cadena.contains("8") || cadena.contains("9")
+                || cadena.contains("0");
 
-        }else if (!socio && compra>= 300){
-            double compraDescuento5= compra-((compra*5)/100);
-            System.out.println("descuento del 20% "+compraDescuento5+" €");
-        }
         System.out.println("FIN");
-        scanner.close();
+
 
     }
 
