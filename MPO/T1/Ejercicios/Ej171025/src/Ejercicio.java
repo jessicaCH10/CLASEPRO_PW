@@ -85,13 +85,13 @@ el IVA? Muéstrese los resultados redondeados a dos decimales. (Compra)
 
     }
 
-    public void ejercicio3(){
+    public void ejercicio3() {
         /*Se introducen los 5 dígitos de un número (decenas de mil, unidades de mil,
 centenas, decenas y unidades), y se obtiene el número correspondiente.
 (Numero)*/
 
 //1.introducir datos 2.guardar variables
-        lecturaTeclado= new Scanner(System.in);//para pedir datos siempre
+        lecturaTeclado = new Scanner(System.in);//para pedir datos siempre
         System.out.println("¿Cuanto es las decenas de mil?");
         int decenasMil = lecturaTeclado.nextInt();
         System.out.println("¿Cuanto es unidades de mil?");
@@ -102,25 +102,18 @@ centenas, decenas y unidades), y se obtiene el número correspondiente.
         int decenas = lecturaTeclado.nextInt();
         System.out.println("¿Cuanto es las unidades");
         int unidades = lecturaTeclado.nextInt();
-    //3.operaciones construit numero completo
+        //3.operaciones construit numero completo
 
         int numeroCompleto = decenasMil * 10000 + unidadesMil * 1000 + centenas * 100 + decenas * 10 + unidades;
-    //4.salida datos
-        System.out.println("el numero completo es: "+numeroCompleto);
+        //4.salida datos
+        System.out.println("el numero completo es: " + numeroCompleto);
 
         //5.cerrramos como buena practica
         lecturaTeclado.close();
         lecturaTeclado = null;//para eliminarlo de memoria
 
 
-
-
-
-
-
-
     }
-
 
 
 
@@ -146,6 +139,38 @@ centenas, decenas y unidades), y se obtiene el número correspondiente.
         System.out.println("El numero de segundos es "+segundo);
         lecturaTeclado.close();
         lecturaTeclado = null;
+        /*/*System.out.println("Indica un numero de 5 digitos");
+        int numeroAnalizar = scanner.nextInt();
+        if (numeroAnalizar >9999 && numeroAnalizar<100000){
+        // 79050
+            int decenasMil = numeroAnalizar/10000; // 7,9050
+            // decenas de mil
+            int unidadesMil = (numeroAnalizar%10000)/1000; // 9,050
+            // unidades mil
+            int centenas = ((numeroAnalizar%10000)%1000)/100; //0,50
+            // centenas
+            int decenas = (((numeroAnalizar%10000)%1000)%100)/10; // 5,0
+            // decenas
+            int unidades = (((numeroAnalizar%10000)%1000)%100)%10; // 0
+            // unidades
+        } else {
+            System.out.println("Numero incorrecto");
+        }
+
+        // 98765 -> "98765"
+        String numeroPalabra = String.valueOf(numeroAnalizar);
+        int decenasMil = Integer.parseInt(String.valueOf(numeroPalabra.charAt(0)));
+        String unidadesMil = String.valueOf(numeroPalabra.charAt(1));
+        String centenas = String.valueOf(numeroPalabra.charAt(2));
+        String decenas = String.valueOf(numeroPalabra.charAt(3));
+        String unidades = String.valueOf(numeroPalabra.charAt(4));
+
+
+
+
+
+    }
+*/
 
     }
 }
